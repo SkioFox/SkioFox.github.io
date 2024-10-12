@@ -4,7 +4,7 @@ SEOTitle: SkioFox Blog
 header-img: img/post-bg-desk.jpg
 email: skiofox@126.com
 description: "Every failure is leading towards success."
-keyword: "SkioFox, Blog, 博客, SkioFox, web, 前端开发, JS, VUE, React, Node, Go, 全栈"
+keyword: "SkioFox, Blog, 博客, web, 前端开发, JS, VUE, React, Node, Go, 全栈"
 url: "https://SkioFox.github.io/"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
 github_repo: "https://github.com/LoverFancy/LoverFancy.github.io" # you code repository
