@@ -4,10 +4,10 @@ SEOTitle: SkioFox Blog
 header-img: img/post-bg-desk.jpg
 email: skiofox@126.com
 description: "Every failure is leading towards success."
-keyword: "SkioFox, Blog, 博客, web, 前端开发, JS, VUE, React, Node, Go, 全栈"
-url: "https://SkioFox.github.io/"          # your host, for absolute URL
+keyword: "SkioFox, Blog, LoverFancy,博客, web, 前端开发, JS, VUE, React, Node, Go, 全栈"
+url: "https://skiofox.github.io/"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
-github_repo: "https://github.com/LoverFancy/LoverFancy.github.io" # you code repository
+github_repo: "https://github.com/SkioFox/SkioFox.github.io" # you code repository
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
@@ -103,7 +103,7 @@ friends: [
         href: "http://blog.skiofox.top"
     },{
         title: "github",
-        href: "https://github.com/SkioFox/"
+        href: "https://github.com/LoverFancy/"
     },{
         title: "MDN",
         href: "https://developer.mozilla.org/zh-CN/"
