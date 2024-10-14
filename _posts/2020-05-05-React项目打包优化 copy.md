@@ -298,4 +298,3 @@ if (process.env.NODE_ENV === 'production') {
 
 #### 使用 HappyPack 和 DllPlugin
 
-> 本文首次发布于 [SkioFox Blog](http://blog.skiofox.top),转载请保留原文链接.
