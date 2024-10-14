@@ -73,7 +73,7 @@ React Native 的初期环境搭建体验并不是很好，有几方面的原因�
 
 由此，我们的工作流如下图所示：
 
-![react-native](/img/2021-07-15/react-native.svg)
+![react-native](/img/2022-01-12/react-native.svg)
 
 以上的工作方式，有几个问题值得考虑：
 
@@ -100,13 +100,13 @@ Google 的 [Flutter](https://flutter.dev/) 跨平台框架从 2017 年 5 月发�
 
 Flutter 使用的是自家 [Dart](https://dart.dev/overview) 语言。这门语言同时支持 [JIT](https://en.wikipedia.org/wiki/Just-in-time_compilation) 编译和 [AOT](https://en.wikipedia.org/wiki/Ahead-of-time_compilation) 编译，并且支持编译成 `Javascript` 代码。
 
-![Dart-platforms.svg](/img/2021-07-15/Dart-platforms.svg)
+![Dart-platforms.svg](/img/2022-01-12/Dart-platforms.svg)
 
 在开发时，Flutter 无论是在 android 端或 iOS 端都将使用 Dart VM 来作为 Dart 的运行时，这点使其具备[hot reload](https://docs.flutter.dev/development/tools/hot-reload)的功能，而在部署应用时，Dart 代码以 AOT 方式编译成 Native 语言。所以本质上，Flutter 应用无异于一个原生端应用。相比之下，React Native 需要 JavaScript 执行引擎来解释执行源码，并通过桥接方式和 Native 环境进行通信。因此，性能上 Dart 有明显的优势。
 
 > Flutter Android 端应用的**性能**要比普通应用 (使用 Java 开发的应用) 更高。Android 生态中，大部分 App 都是使用 Java 作为开发语言，运行在系统的 [DVM](https://source.android.com/docs/core/runtime) 上。而 Flutter 直接编译成 C/C++ 代码，调用 [Android NDK](https://developer.android.com/ndk/guides) 运行。
 
-![rn-vs-flutter](/img//2021-07-15/rn-vs-flutter.png)
+![rn-vs-flutter](/img//2022-01-12/rn-vs-flutter.png)
 
 React Native 框架使用 Javascript 语言，其运行在 Javascript 执行引擎上。要想实现原生视图及交互，必须和[宿主平台](https://reactnative.dev/architecture/glossary#host-platform) Native 环境进行交互，而他们之间的通信手段使用很传统的 `JSON 序列化` 方式交换数据。这种方式会在应用初始化时，一次性传递较多的渲染数据，而导致 [TTI](https://web.dev/interactive/) 时间变成长。相比 iOS 端，在 Android 端很容易形成[首次加载的白屏现象](https://www.devio.org/2016/09/30/React-Native-启动白屏问题解决方案,教程)。虽是硬伤，但新架构会有所改进。
 
@@ -120,13 +120,13 @@ React Native 框架使用 Javascript 语言，其运行在 Javascript 执行引�
 
 React Native 在渲染上由 Native UI 管理模块来执行渲染，这意味着渲染是由宿主平台来决定的，如此各自平台就会保持其 UI 风格，如下图所示：
 
-![rn-ios-android](/img/2021-07-15/rn-ios-android.webp)
+![rn-ios-android](/img/2022-01-12/rn-ios-android.webp)
 
 这种不同，不仅表现在样式上，还有各自平台特有的组件属性上的不同。
 
 Flutter 使用内置渲染器： [Skia](https://skia.org/docs/)，它是一个 2D 图形库。在 Flutter 3.3 引入了改进的图形引擎：[Impeller](https://github.com/flutter/flutter/wiki/Impeller)。所以它不再保留原生端样式风格，所有平台的视图统一使用 google 自家的[Material](https://material.io/design/introduction#material-measurements) 风格，也没有平台上的属性差异。不需要关注不同平台的特有属性这点，对于开发者而言是喜闻乐见的。
 
-![flutter-android-ios](/img/2021-07-15/flutter-android-ios.png)
+![flutter-android-ios](/img/2022-01-12/flutter-android-ios.png)
 
 因为渲染上的自实现，在部署应用时，Skia 库和对应的组件库会内置到 App 中，这会增加 App 的体积。
 
@@ -154,7 +154,7 @@ Flutter 使用内置渲染器： [Skia](https://skia.org/docs/)，它是一个 2
 
 新架构之前的架构图如下：
 
-![react-native-architecture](/img/2021-07-15/react-native-architecture.svg)
+![react-native-architecture](/img/2022-01-12/react-native-architecture.svg)
 
 React Native 以 React 技术为开发基础，通过 Metro 捆绑器打包成最终目标代码文件 JS Bundle。jsbundle 运行在 JavaScriptCore 执行引擎，通过 Bridge 传递布局及相关渲染数据。最后，由 Yoga 进行与 Native UI 模块管理布局和渲染的工作。
 
@@ -188,7 +188,7 @@ Hermes 相对 JSC 做了一些性能优化：
 2. 降低内存的使用。针对新架构，优化了引擎的 GC；
 3. Android 端 APK 下载体积变小；
 
-![hermesstats-1](/img/2021-07-15/hermesstats-1.webp)
+![hermesstats-1](/img/2022-01-12/hermesstats-1.webp)
 
 有人担心 Hermes 内置到 iOS App 内，是否可以过审，至少目前社区内尚无反馈。从[这里](https://github.com/facebook/hermes/issues/34)有相关的讨论，可以知道 Apple 并未强制要求 App 使用 JSC，Apple 更关注的是代码下发的动态执行。
 
@@ -258,7 +258,7 @@ allprojects {
 
 Flipper 是开箱即用的，提供了包括：`网络`、`布局和属性样式`、`持久化存储展示`、`日志`、`Hermes Debugger` 等非常有用的分析功能。
 
-![react-native-react](/img/2021-07-15/react-native-react.png)
+![react-native-react](/img/2022-01-12/react-native-react.png)
 
 在 React Native 0.62 版本及以上，默认支持 Flipper。相比 React Native 的 Chrome Devtool 调试，它更强大更实用，你可以在[这里](https://fbflipper.com/docs/features/react-native/)查看更多信息。
 
