@@ -1,7 +1,7 @@
 ---
 layout:     post
-title:      ajax与jequery与axios的封装
-subtitle:   ajax与jequery与axios的封装
+title:      ajax与jquery与axios的封装
+subtitle:   ajax与jquery与axios的封装
 date:       2019-04-13
 author:     SkioFox
 header-img: img/post-bg-iWatch.jpg

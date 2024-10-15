@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      理解npm publish原理
-subtitle:   理解npm publish原理
+subtitle:   npm publish原理解析
 date:       2021-05-03
 author:     SkioFox
 header-img: img/post-bg-hacker.jpg

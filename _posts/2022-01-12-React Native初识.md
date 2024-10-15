@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      React Native初识
-subtitle:   React Native初识
+subtitle:   React Native整体介绍与理解
 date:       2022-01-12
 author:     SkioFox
 header-img: img/phome-bg.jpg
@@ -106,7 +106,7 @@ Flutter 使用的是自家 [Dart](https://dart.dev/overview) 语言。这门语�
 
 > Flutter Android 端应用的**性能**要比普通应用 (使用 Java 开发的应用) 更高。Android 生态中，大部分 App 都是使用 Java 作为开发语言，运行在系统的 [DVM](https://source.android.com/docs/core/runtime) 上。而 Flutter 直接编译成 C/C++ 代码，调用 [Android NDK](https://developer.android.com/ndk/guides) 运行。
 
-![rn-vs-flutter](/img//2022-01-12/rn-vs-flutter.png)
+![rn-vs-flutter](/img/2022-01-12/rn-vs-flutter.png)
 
 React Native 框架使用 Javascript 语言，其运行在 Javascript 执行引擎上。要想实现原生视图及交互，必须和[宿主平台](https://reactnative.dev/architecture/glossary#host-platform) Native 环境进行交互，而他们之间的通信手段使用很传统的 `JSON 序列化` 方式交换数据。这种方式会在应用初始化时，一次性传递较多的渲染数据，而导致 [TTI](https://web.dev/interactive/) 时间变成长。相比 iOS 端，在 Android 端很容易形成[首次加载的白屏现象](https://www.devio.org/2016/09/30/React-Native-启动白屏问题解决方案,教程)。虽是硬伤，但新架构会有所改进。
 
