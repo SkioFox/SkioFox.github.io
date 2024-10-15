@@ -80,21 +80,15 @@ export async function run(config: Config, reporter: Reporter, flags: Object, arg
 
 默认跳过版本号设置
 
-```plain
-shell
-
- 代码解读
-复制代码# 如果我们不添加参数，默认是会跳过版本号设置
+```sh
+# 如果我们不添加参数，默认是会跳过版本号设置
 yarn publish
 ```
 
 设置正式版本号
 
-```plain
-shell
-
- 代码解读
-复制代码# 设置补丁版本，比如之前的版本是1.0.0 执行之后会变成1.0.1
+```sh
+# 设置补丁版本，比如之前的版本是1.0.0 执行之后会变成1.0.1
 yarn publish --patch
 
 # 设置小版本，比如之前的版本是1.1.0 执行之后会变成1.1.0
@@ -106,22 +100,21 @@ yarn publish --major
 
 设置`beta` or `alpha`版本
 
-```plain
-shell
-
- 代码解读
-复制代码# 发布beta版本，比如1.0.0则会变成1.0.1-beta.0，比如1.1.1则会变成1.1.2-beta.0
+```sh
+# 发布beta版本，比如1.0.0则会变成1.0.1-beta.0，比如1.1.1则会变成1.1.2-beta.0
 yarn publish --prerelease --preid=beta
 
 # 当我们beta版本稳定之后，可以通过上面的--patch发布正式版本
 yarn publish --patch
 ```
 
-注意点：如果准备发布`beta` or `alpha`之类的版本，那么`publish` 需要带上`--tag`参数，比如发布是`beta`版本`--tag=beta`，这样才会发布成真正的`beta`版本，不然会发布到`latest`tag上 ![](https://cdn.nlark.com/yuque/0/2024/webp/326579/1728899126545-766cb74e-2cda-4b8a-8160-80f94da1453e.webp) 如上图所示通过`yarn info [包名]`，查看`dist-tags`内是否有`beta` tag，如果有则表示发布成功
+注意点：如果准备发布`beta` or `alpha`之类的版本，那么`publish` 需要带上`--tag`参数，比如发布是`beta`版本`--tag=beta`，这样才会发布成真正的`beta`版本，不然会发布到`latest`tag上 
+![](/img/2021-05-03/code.png) 
+如上图所示通过`yarn info [包名]`，查看`dist-tags`内是否有`beta` tag，如果有则表示发布成功
 
 当然我们平常在发布`npm`包的时候，一帮不会直接使用`yarn publish`来维护我们的版本号
 
-+ 单包我们一般会用到[standard-version](https://link.juejin.cn?target=https%3A%2F%2Fgithub.com%2Fconventional-changelog%2Fstandard-version)
++ 单包我们一般会用到[standard-version](https://github.com/conventional-changelog/standard-version)
 + 多包，如果是`lerna`则会用到`lerna`本身的`version`命令来维护版本号
 
 ### 获取token
@@ -360,7 +353,7 @@ npm login --scope=@namespace --registry=源地址
 
 其实从生成过程来看，就能看出，_auth是一种明文生成的令牌方式，容易导致用户名与密码泄露，而_authToken是通过源服务器生成的一种令牌方式，相对于明文方式更安全
 
-_auth是npm早期的一个产物，根据npm自身的规划，_auth这种方式，最终是会被去掉的，更多内容可以参考[Deprecate and drop _password and _auth support in .npmrc](https://link.juejin.cn?target=https%3A%2F%2Fgithub.com%2Fnpm%2Fnpm%2Fissues%2F9866)
+_auth是npm早期的一个产物，根据npm自身的规划，_auth这种方式，最终是会被去掉的，更多内容可以参考[Deprecate and drop _password and _auth support in .npmrc](https://github.com/npm/npm/issues/9866)
 
 ## 总结
 
