@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      React Native初识
+title:      React Native 技术详解 (一)
 subtitle:   React Native整体介绍与理解
 date:       2022-01-12
 author:     SkioFox
