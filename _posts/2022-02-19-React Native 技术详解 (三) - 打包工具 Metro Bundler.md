@@ -292,8 +292,6 @@ AppRegistry.registerComponent(appName, () => App);
   }
 ```
 
-通过 [graph](https://github.com/dun-cat/code-snippets/blob/main/metro.config.js)，我使用 D3.js 构建了一张 Android 平台下的[模块依赖图](https://observablehq.com/embed/@dun-cat/mobile-patent-suits?cells=chart)
-
 2. `prepend` 的值为一些`垫片 (Polyfill)`文件路径组成的数组：
 
 ``` ts
