@@ -563,3 +563,9 @@ export function reasonableTime(appOrParcel, lifecycle) {
 ``` javascript
 appOrParcel [lifecycle](getProps(appOrParcel) )
 ```
+
+### 参考文档
+
+\> https://juejin.cn/post/6885212507837825038#heading-6
+
+\> https://mp.weixin.qq.com/s?__biz=MzA3NTk4NjQ1OQ==&mid=2247484245&idx=1&sn=9ee91018578e6189f3b11a4d688228c5&chksm=9f696021a81ee937847c962e3135017fff9ba8fd0b61f782d7245df98582a1410aa000dc5fdc&token=165646905&lang=zh_CN#rd
