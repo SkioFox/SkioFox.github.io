@@ -31,7 +31,7 @@ tags:
 1.平台搭建
 
 由于IOS端打包需要强依赖MacOS，因此我们选择一台macOS作为打包服务器。打包过程比较复杂，对原生ios/android环境依赖性比较强，本地需要完成比较复杂的配置。
-参考打包方案设计：[来访多APP构建打包方案(IOS+Android)](https://blog.skiofox.top/2022/07/15/React-Native-%E6%8A%80%E6%9C%AF%E8%AF%A6%E8%A7%A3-(%E4%B9%9D)-APP%E6%89%93%E5%8C%85%E5%92%8C%E7%83%AD%E6%9B%B4%E6%96%B0%E8%87%AA%E5%8A%A8%E5%8C%96%E5%92%8C%E7%A7%81%E6%9C%89%E5%8C%96/)
+参考打包方案设计：[来访多APP构建打包方案(IOS+Android)](https://blog.skiofox.top/2022/07/15/React-Native-%E6%8A%80%E6%9C%AF%E8%AF%A6%E8%A7%A3-(%E4%B9%9D)-%E7%A7%81%E6%9C%89%E5%8C%96%E5%A4%9AAPP%E6%89%93%E5%8C%85%E6%96%B9%E6%A1%88/)
 热更新：热更新推送是基于code-push，只需通过命令行手动触发，相对比较简单。
 
 通过调研Jenkins工具，可以很好实现在本机上实现界面化的CI/CD管理，通过配置脚本任务准确执行打包和热更新过程，基本流程如下：
