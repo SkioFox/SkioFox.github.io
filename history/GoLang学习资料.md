@@ -1,4 +1,4 @@
-
+<!-- 
 **基础知识：**
 
 [go新版本包管理](https://segmentfault.com/a/1190000018690961)
@@ -70,4 +70,4 @@ Go 语言高性能编程 ：[Go 逃逸分析](https://geektutu.com/post/hpg-esca
 
  [php转go入门指引](/pages/viewpage.action?pageId=11079723)
 
-[优雅关闭原理](https://segmentfault.com/a/1190000020303015)
+[优雅关闭原理](https://segmentfault.com/a/1190000020303015) -->

@@ -122,7 +122,7 @@ Code Push Server 给`主版本号`预留了 `3` 位大小，`次版本号` `5` �
 code-push release demo-ios ./dist/rn/ios "1.0.3" -d Staging --des "update something"
 ```
 
-![application-update-strategy-check-update1.svg](/img/2022-06-30application-update-strategy-check-update1.svg)
+![application-update-strategy-check-update1.svg](/img/2022-06-30/application-update-strategy-check-update1.svg)
 
 #### 思考
 
