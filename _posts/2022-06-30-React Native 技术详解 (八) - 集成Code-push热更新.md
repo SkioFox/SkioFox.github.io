@@ -300,3 +300,5 @@ Code Push 默认调用 React Native 的 `Alert.alert()` 方法来弹出模态框
 \> [https://github.com/microsoft/code-push/blob/v3.0.1/cli/README-cn.md](https://github.com/microsoft/code-push/blob/v3.0.1/cli/README-cn.md)
 
 \> [https://github.com/IllusionVK/ReplaceAppCenter/issues/3](https://github.com/IllusionVK/ReplaceAppCenter/issues/3)
+
+\> [https://juejin.cn/post/6990680841533800462](https://juejin.cn/post/6990680841533800462)
